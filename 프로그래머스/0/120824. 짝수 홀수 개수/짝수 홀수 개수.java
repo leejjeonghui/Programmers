@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Solution {
+    public ArrayList<Integer> solution(int[] num_list) {
+        ArrayList<Integer> arr = new ArrayList();
+        int even = 0;
+        int odd = 0; 
+        for(int i =0; i<num_list.length ; i++){
+            if(num_list[i]%2==0){
+                even++;
+            }else
+            {
+                odd++;
+            }
+        }
+        arr.add(even);
+        arr.add(odd);
+        return arr;
+    }
+}
