@@ -3,7 +3,7 @@ import java.util.LinkedHashSet;
 
 class Solution {
     public String solution(String my_string) {
-        StringBuilder answer = new StringBuilder();
+        String answer = "";
         LinkedHashSet<Character> set = new LinkedHashSet<>();
         
         for (char str : my_string.toCharArray()) {
@@ -11,9 +11,9 @@ class Solution {
         }
         
         for (char a : set) {
-            answer.append(a);
+            answer+=a;
         }
         
-        return answer.toString();
+        return answer;
     }
 }
