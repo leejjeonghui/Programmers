@@ -1,21 +1,15 @@
 import java.util.*;
 
 class Solution {
-    public int solution(String[] strArr)   {
+    public int solution(String[] strArr)  {
         int answer = 0;
-        HashMap<Integer,Integer> map = new HashMap<>();
+        int[] cnt = new int[strArr.length];
 
-        for (int i = 0; i < strArr.length; i++) {
-            int len = strArr[i].length(); 
-            if(map.containsKey(len)){
-                map.put(len,map.get(len)+1);
-            }else {
-                map.put(len,1);
-            }
+        for (String str:
+             strArr) {
+            cnt[str.length()]++;
         }
-        
-       answer = Collections.max(map.values());
-        
+        answer = Arrays.stream(cnt).max().getAsInt();
         return answer;
     }
 }
